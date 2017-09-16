@@ -1,0 +1,7 @@
+#ifndef EASY_NOTATION_H
+#define EASY_NOTATION_H
+
+#define ONE EASY_ONE
+#define TIMES EASY_TIMES
+
+#endif /* EASY_NOTATION */
