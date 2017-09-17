@@ -3,35 +3,55 @@
 
 typedef unsigned long long natural;
 #define NATURAL_BITS (sizeof(natural) << 3)
-static const unsigned natural_bits = NATURAL_BITS;
+const unsigned natural_bits;
 #define SUP_NATURAL ((natural) -1)
-static const natural sup_natural = SUP_NATURAL;
+const natural sup_natural;
 
 typedef long long relative;
 #define RELATIVE_BITS (sizeof(relative) << 3)
-static const unsigned relative_bits = RELATIVE_BITS;
+const unsigned relative_bits;
 #define SUP_RELATIVE (((natural) 1 << (RELATIVE_BITS - 1)) - 1)
-static const relative sup_relative = SUP_RELATIVE;
+const relative sup_relative;
+#define INF_RELATIVE ((natural) 1 << (RELATIVE_BITS - 1))
+const relative inf_relative;
 
 typedef long long easy;
 #define EASY_BITS (sizeof(easy) << 3)
-#define SUP_EASY ((easy) 1 << 63)
-static const easy sup_easy = SUP_EASY;
-
-#define EASE 15
-#define EASY_ONE (1 << EASE)
+const unsigned easy_bits;
+#define EASE 24
+const unsigned ease;
+#define SUP_EASE_DIGITS 6
+const unsigned sup_ease_digits;
+#define EASY_ONE ((easy) 1 << EASE)
+const easy easy_one;
 #define SUP_EASE (EASY_ONE - 1)
+const easy sup_ease;
+#define INF_EASE ((easy) 1)
+const easy inf_ease;
 #define EASES / easy_one
 
-#define EASY_RELATIVE_BITS (RELATIVE_BITS - EASE)
-#define SUP_EASY_RELATIVE ((1 << EASY_RELATIVE_BITS) - 1)
+#define SUP_EASY (~((easy) 1 << 63))
+const easy sup_easy;
+#define INF_EASY (((easy) 1 << 63) | SUP_EASE)
+const easy inf_easy;
 
-#define EASY_TIMES / EASY_ONE *
-#define EASY_BY * EASY_ONE /
+#define EASY_RELATIVE_BITS (RELATIVE_BITS - EASE)
+#define SUP_EASY_RELATIVE (((relative) 1 << (EASY_RELATIVE_BITS - 1)) - 1)
+const relative sup_easy_relative;
+#define INF_EASY_RELATIVE (-((relative) 1 << (EASY_RELATIVE_BITS - 1)))
+const relative inf_easy_relative;
+
+relative e_relative (easy e);
+relative e_ease (easy e);
+easy e_times (easy a, easy b);
+easy e_by (easy a, easy b);
+
+unsigned easy_to_ascii (char *a, unsigned alen, easy e);
 
 typedef unsigned long angle;
 #define ANGLE_BITS (sizeof(angle) << 3)
 #define SUP_ANGLE ((angle) -1)
+const angle sup_angle;
 
 easy e_absolute_value (easy e);
 easy e_squared (easy e);
