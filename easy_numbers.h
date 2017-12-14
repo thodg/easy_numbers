@@ -18,9 +18,9 @@ const relative inf_relative;
 typedef long long easy;
 #define EASY_BITS (sizeof(easy) << 3)
 const unsigned easy_bits;
-#define EASE 24
+#define EASE 32
 const unsigned ease;
-#define SUP_EASE_DIGITS 6
+#define SUP_EASE_DIGITS 9
 const unsigned sup_ease_digits;
 #define EASY_ONE ((easy) 1 << EASE)
 const easy easy_one;
