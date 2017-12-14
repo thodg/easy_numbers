@@ -43,6 +43,10 @@ void demo_write ()
   printf("\nsup_easy_relative = % lli", sup_easy_relative);
   printf("\nINF_EASY_RELATIVE = % lli", INF_EASY_RELATIVE);
   printf("\ninf_easy_relative = % lli", inf_easy_relative);
+  printf("\n-EASY_ONE / 2 = "); e_print(-EASY_ONE / 2);
+  printf("\n-EASY_ONE / 3 = "); e_print(-EASY_ONE / 3);
+  printf("\n-100 * EASY_ONE / 2 = "); e_print(-100 * EASY_ONE / 2);
+  printf("\n-100 * EASY_ONE / 3 = "); e_print(-100 * EASY_ONE / 3);
   printf("\n");
 }
 
@@ -74,7 +78,7 @@ void print_demo_times (easy a, easy b)
 void demo_times ()
 {
   printf("\n__ Times _____________________________\n");
-  print_demo_times(0, 0);
+  /*  print_demo_times(0, 0);
   print_demo_times(0, EASY_ONE);
   print_demo_times( EASY_ONE,  0);
   print_demo_times( EASY_ONE,  EASY_ONE);
@@ -90,7 +94,7 @@ void demo_times ()
   print_demo_times(-EASY_ONE * 3,  EASY_ONE * 2);
   print_demo_times( EASY_ONE / 2,  EASY_ONE / 2);
   print_demo_times( EASY_ONE / 3,  EASY_ONE / 2);
-  print_demo_times( 7 * EASY_ONE / 2,  EASY_ONE / 3);
+  print_demo_times( 7 * EASY_ONE / 2,  EASY_ONE / 3); */
   print_demo_times(-EASY_ONE / 2,  EASY_ONE);
   print_demo_times(-7 * EASY_ONE / 2,  EASY_ONE / 3);
   print_demo_times( EASY_ONE / 3, -EASY_ONE / 2);
