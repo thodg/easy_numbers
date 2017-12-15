@@ -38,7 +38,7 @@ const easy inf_easy;
 #define EASY_RELATIVE_BITS (RELATIVE_BITS - EASE)
 #define SUP_EASY_RELATIVE (((relative) 1 << (EASY_RELATIVE_BITS - 1)) - 1)
 const relative sup_easy_relative;
-#define INF_EASY_RELATIVE (-((relative) 1 << (EASY_RELATIVE_BITS - 1)))
+#define INF_EASY_RELATIVE (-SUP_EASY_RELATIVE)
 const relative inf_easy_relative;
 
 relative e_relative (easy e);

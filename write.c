@@ -113,30 +113,28 @@ unsigned easy_to_ascii (char *a, unsigned len, easy e)
 {
   relative z = e_relative(e);
   relative ease = e_ease(e);
-  unsigned n = 0;
+  unsigned i = 0;
   char sign = ' ';
-  if (z < 0) {
+  if (e < 0) {
     sign = '-';
     z = -z;
-    if (ease)
-      z = z - 1;
   }
-  a[n++] = sign;
-  n += natural_to_ascii(a + n, len - n, z);
-  if (n > 1) {
-    if (len < n + 2) {
+  a[i++] = sign;
+  i += natural_to_ascii(a + i, len - i, z);
+  if (i > 1) {
+    if (len < i + 2) {
       a[0] = 0;
       return 0;
     }
-    a[n++] = '.';
-    unsigned p = ease_to_ascii(a + n, len - n, ease);
+    a[i++] = '.';
+    unsigned p = ease_to_ascii(a + i, len - i, ease);
     if (!p) {
       a[0] = 0;
       return 0;
     }
-    n += p;
+    i += p;
   }
-  return n;
+  return i;
 }
 
 unsigned tens_of (unsigned n)

@@ -21,14 +21,17 @@ const relative inf_easy_relative = INF_EASY_RELATIVE;
 
 const angle sup_angle = SUP_ANGLE;
 
-relative e_relative (easy e)
-{
-  return (relative) (e >> EASE);
-}
-
 relative e_ease (easy e)
 {
-  return (relative) (e & (~(SUP_EASY_RELATIVE << EASE)));
+  return (relative) (e & SUP_EASE);
+}
+
+relative e_relative (easy e)
+{
+  relative z = e >> EASE;
+  if (z < 0 && e_ease(e))
+    z = z + 1;
+  return z;
 }
 
 easy e_times (easy a, easy b)
