@@ -23,7 +23,10 @@ const angle sup_angle = SUP_ANGLE;
 
 relative e_ease (easy e)
 {
-  return (relative) (e & SUP_EASE);
+  relative ease = e & SUP_EASE;
+  if (ease && e < 0)
+    return (relative) (EASY_ONE - ease);
+  return ease;
 }
 
 relative e_relative (easy e)
@@ -36,10 +39,10 @@ relative e_relative (easy e)
 
 easy e_times (easy a, easy b)
 {
-  return a * b >> EASE;
+  return (a * b) >> EASE;
 }
 
 easy e_by (easy a, easy b)
 {
-  return a << EASE / b;
+  return (a << EASE) / b;
 }
