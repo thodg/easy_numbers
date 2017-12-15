@@ -113,6 +113,10 @@ void demo_times ()
   print_demo_times(-100 * EASY_ONE / 2, EASY_ONE / 2);
   print_demo_times(-100 * EASY_ONE / 3, EASY_ONE / 2);
   print_demo_times(-EASY_ONE / 2, EASY_ONE / 2);
+  print_demo_times(100 * EASY_ONE, 100 * EASY_ONE);
+  print_demo_times(1000 * EASY_ONE, 1000 * EASY_ONE);
+  print_demo_times(10000 * EASY_ONE, 10000 * EASY_ONE);
+  print_demo_times(100000 * EASY_ONE, 100000 * EASY_ONE);
   printf("\n");
 }
 
