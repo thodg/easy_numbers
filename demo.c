@@ -45,8 +45,22 @@ void demo_write ()
   printf("\ninf_easy_relative = % lli", inf_easy_relative);
   printf("\n-EASY_ONE / 2 = "); e_print(-EASY_ONE / 2);
   printf("\n-EASY_ONE / 3 = "); e_print(-EASY_ONE / 3);
+  printf("\n-EASY_ONE / 4 = "); e_print(-EASY_ONE / 4);
+  printf("\n-EASY_ONE / 5 = "); e_print(-EASY_ONE / 5);
+  printf("\n-EASY_ONE / 6 = "); e_print(-EASY_ONE / 6);
+  printf("\n-EASY_ONE / 7 = "); e_print(-EASY_ONE / 7);
+  printf("\n-EASY_ONE / 8 = "); e_print(-EASY_ONE / 8);
+  printf("\n-EASY_ONE / 9 = "); e_print(-EASY_ONE / 9);
+  printf("\n-EASY_ONE / 10 = "); e_print(-EASY_ONE / 10);
   printf("\n-100 * EASY_ONE / 2 = "); e_print(-100 * EASY_ONE / 2);
   printf("\n-100 * EASY_ONE / 3 = "); e_print(-100 * EASY_ONE / 3);
+  printf("\n-100 * EASY_ONE / 4 = "); e_print(-100 * EASY_ONE / 4);
+  printf("\n-100 * EASY_ONE / 5 = "); e_print(-100 * EASY_ONE / 5);
+  printf("\n-100 * EASY_ONE / 6 = "); e_print(-100 * EASY_ONE / 6);
+  printf("\n-100 * EASY_ONE / 7 = "); e_print(-100 * EASY_ONE / 7);
+  printf("\n-100 * EASY_ONE / 8 = "); e_print(-100 * EASY_ONE / 8);
+  printf("\n-100 * EASY_ONE / 9 = "); e_print(-100 * EASY_ONE / 9);
+  printf("\n-100 * EASY_ONE / 10 = "); e_print(-100 * EASY_ONE / 10);
   printf("\n");
 }
 
@@ -78,7 +92,7 @@ void print_demo_times (easy a, easy b)
 void demo_times ()
 {
   printf("\n__ Times _____________________________\n");
-  /*  print_demo_times(0, 0);
+  print_demo_times(0, 0);
   print_demo_times(0, EASY_ONE);
   print_demo_times( EASY_ONE,  0);
   print_demo_times( EASY_ONE,  EASY_ONE);
@@ -94,11 +108,11 @@ void demo_times ()
   print_demo_times(-EASY_ONE * 3,  EASY_ONE * 2);
   print_demo_times( EASY_ONE / 2,  EASY_ONE / 2);
   print_demo_times( EASY_ONE / 3,  EASY_ONE / 2);
-  print_demo_times( 7 * EASY_ONE / 2,  EASY_ONE / 3); */
+  print_demo_times( 100 * EASY_ONE / 2,  EASY_ONE / 3);
   print_demo_times(-EASY_ONE / 2,  EASY_ONE);
-  print_demo_times(-7 * EASY_ONE / 2,  EASY_ONE / 3);
-  print_demo_times( EASY_ONE / 3, -EASY_ONE / 2);
-  print_demo_times( EASY_ONE / 2, -EASY_ONE / 3);
+  print_demo_times(-100 * EASY_ONE / 2, EASY_ONE / 2);
+  print_demo_times(-100 * EASY_ONE / 3, EASY_ONE / 2);
+  print_demo_times(-EASY_ONE / 2, EASY_ONE / 2);
   printf("\n");
 }
 
